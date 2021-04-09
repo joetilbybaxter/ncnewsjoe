@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  /* border: 2px green;
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr 50px 8fr / 1fr;
+  grid-template-areas: 
+  "Title"
+  "NavBar"
+  "Articles"; */
+}
+
+.Title {
+  border: 4px purple solid;
+  grid-area: title;
+}
+
+.NavBar {
+  border: 10px red solid;
+  grid-area: nav;
+}
+.Articles{
+  text-align: center;
+}
