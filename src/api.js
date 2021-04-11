@@ -7,7 +7,11 @@ const request = axios.create({
 export const fetchArticles = () => {
     return request.get("/articles").then(({data}) => {
         return data.articles
- 
+    }) 
+}
+
+export const fetchArticle = (article_id) => {
+    return request.get(`/articles/${article_id}`).then(({data}) => {
+        return data.article
     })
-  
 }

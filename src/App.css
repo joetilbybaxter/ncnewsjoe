@@ -1,13 +1,5 @@
 .App {
   text-align: center;
-  /* border: 2px green;
-  height: 100vh;
-  display: grid;
-  grid-template: 1fr 50px 8fr / 1fr;
-  grid-template-areas: 
-  "Title"
-  "NavBar"
-  "Articles"; */
 }
 
 .Title {
@@ -21,4 +13,13 @@
 }
 .Articles{
   text-align: center;
+}
+.Links{
+  display: flex;
+  grid-gap: 2px;
+
+}
+.ArticleCard{
+  border : 5px blue;
+  grid-area: ArticleCard;
 }

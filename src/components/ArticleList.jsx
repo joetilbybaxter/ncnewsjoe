@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as api from "../api"
-
+import {Link} from "@reach/router"
 
 class ArticlesList extends Component {
     state = {
@@ -13,7 +13,7 @@ class ArticlesList extends Component {
         }
     componentDidUpdate(prevProps){
         const {articles} = this.props;
-        if(articles !== prevProps.aticles){
+        if(articles !== prevProps.articles){
             this.getArticles(articles)
         }
     }
@@ -23,14 +23,14 @@ class ArticlesList extends Component {
             
         
             <main className="ArticlesList">
-                {articles.map(({title, body, author, topic}) => {
+                {articles.map(({title, body, author, topic, votes, article_id}) => {
                     return (
                         <section className="ArticleCard" key={title}>
-                            {""}
                             <h2>{title}</h2>
-                            <p>{body}</p>
+                            <p>{votes}</p>
                             <p>{author}</p>
                             <p>{topic}</p>
+                            <Link to={`/articles/${article_id}`}>Link to {title}</Link>
                         </section>
                     )
                 })}

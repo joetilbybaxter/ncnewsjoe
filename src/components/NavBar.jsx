@@ -12,26 +12,23 @@ class NavBar extends Component {
         })
       
         }
+   
   
     
     render() {
-        // const { articles } = this.state
+
         return (
             <nav className = "NavBar" >
-                {/* {articles.map(({ article_id}) => {
-                    return ( */}
-                        <Link key={"articles"} to="/articles">
-                            Articles
-                            {console.dir("HELLO <<<<<")}
+                <Link className="Links" to="/">
+                    Home
+                </Link>
+                <Link key={"articles"} to="/articles" className="Links">
+                            All Articles
                         </Link>
-                    {/* ) */}
-                {/* })} */}
-                {/* )} */}
             </nav>
-        );
-    }
-   
-
+                    
+        );                 
+}
 }
 
 export default NavBar;
