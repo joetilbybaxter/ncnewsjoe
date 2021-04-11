@@ -15,3 +15,9 @@ export const fetchArticle = (article_id) => {
         return data.article
     })
 }
+
+export const fetchTopics = () => {
+    return request.get("/topics").then(({data})=> {
+        return data.topics
+    })
+}

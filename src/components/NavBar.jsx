@@ -22,9 +22,11 @@ class NavBar extends Component {
                 <Link className="Links" to="/">
                     Home
                 </Link>
+             
                 <Link key={"articles"} to="/articles" className="Links">
                             All Articles
                         </Link>
+                        <Link to="/topics" className="Links">Topics</Link>
             </nav>
                     
         );                 
