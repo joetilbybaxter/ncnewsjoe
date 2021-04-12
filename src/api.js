@@ -21,3 +21,12 @@ export const fetchTopics = () => {
         return data.topics
     })
 }
+export const changeVotes = (article_id, increment) => {
+    return request.patch(`/articles/${article_id}`, {votes: increment})
+}
+
+export const fetchComments = (article_id) => {
+    return request.get(`/articles/${article_id}/comments`).then(({data})=> {
+        return data.comments
+    })
+}

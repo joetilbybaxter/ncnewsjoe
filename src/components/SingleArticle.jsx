@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as api from "../api"
 import Loader from "react-loader-spinner"
+import {Link} from "@reach/router"
 
 class SingleArticle extends Component {
     state = {
@@ -32,7 +33,7 @@ class SingleArticle extends Component {
             )
         }
         const {
-            title, body, votes, author, topic, 
+            title, body, votes, author, topic, comment_count, article_id 
          } = article;
         return (
             <main>
@@ -41,6 +42,8 @@ class SingleArticle extends Component {
                 <p>{votes}</p>
                 <p>{author}</p>
                 <p>{topic}</p>
+                <p>{comment_count}</p>
+                <Link to={`/articles/${article_id}/comments`}>Comments</Link>
             </main>
         );
     }
